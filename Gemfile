@@ -69,3 +69,4 @@ gem "tailwindcss-rails", "~> 2.0"
 gem "devise"
 gem 'rolify'
 gem 'pundit'
+gem 'faker'
