@@ -130,6 +130,8 @@ GEM
     pg (1.5.4)
     puma (5.6.7)
       nio4r (~> 2.0)
+    pundit (2.3.1)
+      activesupport (>= 3.0.0)
     racc (1.7.1)
     rack (2.2.8)
     rack-test (2.1.0)
@@ -168,6 +170,7 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    rolify (6.0.1)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     sassc (2.4.0)
@@ -222,7 +225,9 @@ DEPENDENCIES
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
+  pundit
   rails (~> 7.0.7, >= 7.0.7.2)
+  rolify
   sassc-rails
   sprockets-rails
   stimulus-rails
