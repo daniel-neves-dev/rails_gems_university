@@ -38,7 +38,8 @@
         </p>
 
         <% if action_name != "show" %>
-          <%= link_to 'Edit', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+          <%= link_to 'Edit', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-yellow-200 inline-block font-medium" %>
+          <%= link_to 'Delete', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-red-500 inline-block font-medium" %>
           <hr class="mt-6">
         <% end %>
     <% end %>
