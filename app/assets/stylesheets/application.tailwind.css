@@ -213,6 +213,17 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
 .cpw7g {
     margin-bottom: 2rem;
 }
+
+/*IMAGE*/
+.cx9j5 {
+    justify-content: center;
+}
+.caf65 {
+    align-items: center;
+}
+.clyv4 {
+    display: flex;
+}
 /*--------------*/
 cyjs5 {
     --tw-text-opacity: 1;
