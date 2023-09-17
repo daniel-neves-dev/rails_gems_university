@@ -87,6 +87,8 @@ GEM
     faker (3.2.1)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    font-awesome-sass (6.4.2)
+      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -223,6 +225,7 @@ DEPENDENCIES
   debug
   devise
   faker
+  font-awesome-sass
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails

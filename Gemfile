@@ -70,3 +70,4 @@ gem "devise"
 gem 'rolify'
 gem 'pundit'
 gem 'faker'
+gem 'font-awesome-sass'

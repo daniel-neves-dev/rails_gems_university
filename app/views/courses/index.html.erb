@@ -1,47 +1,50 @@
 <div class="container mx-auto">
-
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Courses</h1>
   </div>
 
   <div id="courses" class="min-w-full">
-    <% @courses.each do |course| %>
-      <div>
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Title:</strong>
-          <%= course.title %>
-        </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <% @courses.each do |course| %>
+        <div class="bg-white rounded overflow-hidden shadow p-3 text-gray-darker leading-normal text-base md:text-xl">
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Title:</strong>
+            <%= course.title %>
+          </div>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Teacher:</strong>
-          <%= course.user.email %>
-        </p>
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Teacher:</strong>
+            <%= course.user.email %>
+          </div>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Description:</strong>
-          <%= course.description %>
-        </p>
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Description:</strong>
+            <%= course.description %>
+          </div>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Language:</strong>
-          <%= course.language %>
-        </p>
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Language:</strong>
+            <%= course.language %>
+          </div>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Level:</strong>
-          <%= course.level %>
-        </p>
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Level:</strong>
+            <%= course.level %>
+          </div>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Price:</strong>
-          <%= course.price %>
-        </p>
+          <div class="my-5">
+            <strong class="block font-medium mb-1">Price:</strong>
+            <%= course.price %>
+          </div>
 
-        <% if action_name != "show" %>
-          <%= link_to 'Edit', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-          <hr class="mt-6">
-        <% end %>
-    <% end %>
+          <div>
+            <% if action_name != "show" %>
+              <%= link_to 'Edit', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-yellow-200 inline-block font-medium" %>
+              <%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?' }, class: "rounded-lg py-3 ml-2 px-5 bg-red-500 inline-block font-medium" %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
