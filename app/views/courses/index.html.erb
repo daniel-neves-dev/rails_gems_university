@@ -3,45 +3,53 @@
     <h1 class="font-bold text-4xl">Courses</h1>
   </div>
 
-  <div id="courses" class="min-w-full">
+  <div id="courses">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <% @courses.each do |course| %>
         <div class="bg-white rounded overflow-hidden shadow p-3 text-gray-darker leading-normal text-base md:text-xl">
-          <div class="my-5">
+          <div class="my-5 flex-col flex">
             <strong class="block font-medium mb-1">Title:</strong>
             <%= course.title %>
           </div>
 
-          <div class="my-5 font-bold">
+          <div class="my-5 flex-col flex font-bold">
             <strong class="block font-medium mb-1">Teacher:</strong>
             <%= course.user.email %>
           </div>
 
-          <div class="my-5">
+          <div class="my-5 flex-col flex">
             <strong class="block font-medium mb-1">Description:</strong>
             <%= course.description %>
           </div>
 
-          <div class="my-5">
+          <div class="my-5 flex-col flex">
             <strong class="block font-medium mb-1">Language:</strong>
             <%= course.language %>
           </div>
 
-          <div class="my-5">
+          <div class="my-5 flex-col flex">
             <strong class="block font-medium mb-1">Level:</strong>
             <%= course.level %>
           </div>
 
-          <div class="my-5">
+          <div class="my-5 flex-col flex">
             <strong class="block font-medium mb-1">Price:</strong>
-            <%= course.price %>
+            <%= number_to_currency(course.price) %>
           </div>
 
           <div>
             <% if action_name != "show" %>
-              <%= link_to 'Edit', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-yellow-200 inline-block font-medium" %>
-              <%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?' }, class: "rounded-lg py-3 ml-2 px-5 bg-red-500 inline-block font-medium" %>
+              <%= link_to  edit_course_path(course),
+                           class: "rounded-lg py-3 ml-2 px-5 bg-yellow-200 inline-block font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" do %>
+                <i class="fa-solid fa-pencil"></i> Edit
+              <% end %>
+              <%= button_to course_path(course), method: :delete,
+                            form: {data:{turbo_confirm:"Delete?"},
+                                   class: "rounded-lg py-3 ml-2 px-5 bg-red-500 inline-block font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"} do %>
+                <i class="fa-solid fa-trash-can text-removeIcon"></i> Delete
+              <% end %>
             <% end %>
+            <%= link_to "Show",course_path(course)  %>
           </div>
         </div>
       <% end %>
