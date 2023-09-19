@@ -1,4 +1,5 @@
 # Rails gems university !
+![index-image](https://github.com/daniel-neves-dev/rails_gems_university/assets/116036896/4eb06e7b-99a0-40ae-94e9-3def4a5e0131)
 
 <table>
   <tr>
