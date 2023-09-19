@@ -16,9 +16,15 @@
 
   <body>
     <main>
-      <%= render 'layouts/navbar' %>
-      <%= render 'layouts/alerts' %>
-      <%= yield %>
+      <div>
+        <%= render 'layouts/navbar' %>
+      </div>
+      <div class="relative text-2xl text-center">
+        <%= render 'layouts/alerts' %>
+      </div>
+      <div>
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
