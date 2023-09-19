@@ -1,3 +1,4 @@
+<div class="  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 <%= form_with(model: course, class: "contents") do |form| %>
   <% if course.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
@@ -11,7 +12,7 @@
     </div>
   <% end %>
 
-  <div class="  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+
     <div class="my-5 flex-col flex">
       <%= form.label :title, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
       <%= form.text_field :title, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
@@ -23,13 +24,15 @@
     </div>
 
     <div class="my-5 flex-col flex">
-      <%= form.label :language, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
-      <%= form.text_field :language, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+      <%= form.label :language, "Select a Language", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.select :language, %w[English Polish Russian], {}, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5", id: "language-select" %>
     </div>
 
+
+
     <div class="my-5 flex-col flex">
-      <%= form.label :level, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
-      <%= form.text_field :level, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+      <%= form.label :level, "Select a Level", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.select :level, %w[Beginner Intermediate Advanced], {}, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5", id: "language-select" %>
     </div>
 
     <div class="my-5 flex-col flex">

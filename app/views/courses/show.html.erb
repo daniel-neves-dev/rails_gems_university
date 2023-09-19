@@ -1,35 +1,40 @@
-<section class="mx-auto grid max-w-4xl grid-cols-12 gap-4 bg-zinc-50 p-1">
-  <div class="py-8 px-4 w-1/4 mx-auto lg:py-16 mt-4">
-    <div class="rounded-lg border border-blue-900 bg-blue-200">
-      <div class="my-5 flex-row flex">
-        <strong class="block font-medium px-2">Title:</strong>
-        <%= @course.title %>
+<div class="flex items-center justify-center min-h-screen my-5">
+  <section class="w-full max-w-4xl p-4 bg-white rounded-lg shadow-lg">
+    <div class="py-8 px-4 lg:py-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-semibold text-blue-900">Course Details</h2>
       </div>
+      <div class="rounded-lg border border-blue-900 bg-blue-200 p-4">
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Title:</strong>
+          <%= @course.title %>
+        </div>
 
-      <div class="my-5 flex-row flex font-bold">
-        <strong class="block font-medium px-2">Teacher:</strong>
-        <%= @course.user.email %>
-      </div>
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Teacher:</strong>
+          <%= @course.user.email %>
+        </div>
 
-      <div class="my-5 flex-row flex">
-        <strong class="block font-medium px-2">Description:</strong>
-        <%= @course.description %>
-      </div>
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Description:</strong>
+          <%= @course.description %>
+        </div>
 
-      <div class="my-5 flex-row flex">
-        <strong class="block font-medium px-2">Language:</strong>
-        <%= @course.language %>
-      </div>
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Language:</strong>
+          <%= @course.language %>
+        </div>
 
-      <div class="my-5 flex-row flex">
-        <strong class="block font-medium px-2">Level:</strong>
-        <%= @course.level %>
-      </div>
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Level:</strong>
+          <%= @course.level %>
+        </div>
 
-      <div class="my-5 flex-row flex">
-        <strong class="block font-medium px-2">Price:</strong>
-        <%= number_to_currency(@course.price) %>
+        <div class="my-5">
+          <strong class="block font-medium text-blue-900">Price:</strong>
+          <%= number_to_currency(@course.price) %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
