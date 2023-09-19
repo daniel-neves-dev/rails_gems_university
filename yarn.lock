@@ -198,6 +198,20 @@
   resolved "https://registry.npmjs.org/@rails/actioncable/-/actioncable-7.0.8.tgz"
   integrity sha512-GjYQv89ZOOfbFw8VMNUOG33GXzyAA/TCVoD+742Ob4svm1XXUkd+w+ewqUXd+7VHQtV35y1/O78AGIPeJDTy/g==
 
+"@rails/actiontext@^7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.8.tgz#aa9f84f1726cce07ff24af9df376995354755a4c"
+  integrity sha512-AsG3QRX7K04c3mlkGBvTf1QRSxOMf7RXv9ve2jlA5C2AsBNHCOeVMmurTLRIC5Q8Mvd4WCUgC+TaNO+BN59WLw==
+  dependencies:
+    "@rails/activestorage" ">= 7.0.0-alpha1"
+
+"@rails/activestorage@>= 7.0.0-alpha1":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-7.0.8.tgz#7ea8a656b5621e0dc57f51e3ad2f06c3af30d3ea"
+  integrity sha512-CxPyCxTV0HIaZP8qqH11tkESNl8TrQsIAesAgeOXDOl0BkaN6nC0/Mq2/0ngezBu9CZbFzfHtP2g6Yl8BWkV8g==
+  dependencies:
+    spark-md5 "^3.0.1"
+
 "@tailwindcss/aspect-ratio@^0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.2.tgz#9ffd52fee8e3c8b20623ff0dcb29e5c21fb0a9ba"
@@ -693,6 +707,11 @@ source-map-js@^1.0.2:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
+spark-md5@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/spark-md5/-/spark-md5-3.0.2.tgz#7952c4a30784347abcee73268e473b9c0167e3fc"
+  integrity sha512-wcFzz9cDfbuqe0FZzfi2or1sgyIrsDwmPwfZC4hiNidPdPINjeUwNfv5kldczoEAcjl9Y1L3SM7Uz2PUEQzxQw==
+
 sucrase@^3.32.0:
   version "3.34.0"
   resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.34.0.tgz#1e0e2d8fcf07f8b9c3569067d92fbd8690fb576f"
@@ -759,6 +778,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+trix@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/trix/-/trix-2.0.5.tgz#f54880ab38e24d47829a04e04afaf03a8607f772"
+  integrity sha512-OiCbDf17F7JahEwhyL1MvK9DxAAT1vkaW5sn+zpwfemZAcc4RfQB4ku18/1mKP58LRwBhjcy+6TBho7ciXz52Q==
 
 ts-interface-checker@^0.1.9:
   version "0.1.13"
